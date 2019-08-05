@@ -1,0 +1,12 @@
+function shtestHelp()
+{
+	source src/usage
+	
+	echo
+	usage
+	echo
+	echo "-h         This help"
+	echo "-D [tests] Directory for your Test Suites"
+	echo "TestSuite  Run all test in this Test Suite only"
+	echo "-f test    Run this test only"
+}

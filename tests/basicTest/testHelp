@@ -1,0 +1,16 @@
+function testICanSeeHelp()
+{
+	# Given
+	source src/shtestHelp
+	# expect -f 
+	
+	# When
+#	actual=$(shtestHelp)
+	
+	# Then
+#	if [ "${actual}" == "${expect}" ]; then
+#		exit 0
+#	else
+#		exit 1
+#	fi
+}
