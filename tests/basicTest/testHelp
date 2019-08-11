@@ -2,15 +2,19 @@ function testICanSeeHelp()
 {
 	# Given
 	source src/shtestHelp
-	# expect -f 
 	
 	# When
-#	actual=$(shtestHelp)
-	
+	shtestHelp >actual.out
+	( echo
+	usage
+	echo
+	echo "-h         This help"
+	echo "-D [tests] Directory for your Test Suites"
+	echo "TestSuite  Run all test in this Test Suite only"
+	echo "-f test    Run this test only" ) > expected.out
+
 	# Then
-#	if [ "${actual}" == "${expect}" ]; then
-#		exit 0
-#	else
-#		exit 1
-#	fi
+	diff  --strip-trailing-cr expected.out actual.out
+	
+	assertExitSuccessfully
 }

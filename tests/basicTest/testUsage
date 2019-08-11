@@ -8,9 +8,5 @@ function testICanSeeUsage()
 	actual=$(usage)
 	
 	# Then
-	if [ "${actual}" == "${expect}" ]; then
-		exit 0
-	else
-		exit 1
-	fi
+	assertEquals "${expect}" "${actual}"
 }
