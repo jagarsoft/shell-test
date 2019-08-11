@@ -5,8 +5,9 @@ Shell Scripting Test Driven Development
 shtest is a toolbox that supports you to develop shell scripts according to TDD approach.
 It was born from need of solve a particular issue (https://github.com/dumblob/mysql2sqlite/issues/8) but looking for a general solution. Other good tools (see links) were discarded when diverging from the desired principles
 
-https://spin.atomicobject.com/2016/01/11/command-line-interface-testing-tools/
-https://github.com/sstephenson/bats
+[Tools for Testing Command Line Interfaces](https://spin.atomicobject.com/2016/01/11/command-line-interface-testing-tools/)
+
+[Bash Automated Testing System](https://github.com/sstephenson/bats)
 
 
 # Principles
@@ -105,6 +106,6 @@ You will see *Success* and *Failure* colored if it is available into your enviro
 
 # Version
 
-Current version is 0.0.2-alpha
+Current version is 0.0.3-alpha
 
 I still am working on it... Stay tuned

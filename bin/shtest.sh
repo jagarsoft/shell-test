@@ -23,6 +23,14 @@ function assertExitSuccessfully() {
 	fi
 }
 
+function assertExitFailurefully() {
+	if [ $? != 0 ]; then
+		echoSuccess "${FUNCNAME[1]}"
+	else
+		echoFailure "${FUNCNAME[1]}"
+	fi
+}
+
 function assertEquals() {
 	if [ "$1" == "$2" ]; then
 		echoSuccess "${FUNCNAME[1]}"
@@ -47,8 +55,13 @@ for d in ${tests}/*; do
     fi
 done
 
-# declare -F
-# declare -f testICanSeeHelp
+# 1. Reflexion
+# 2. get functions list
+# 3. get functions begining with test
+testFunctions=`declare -F |	cut -d " " -f 3 | egrep "^test.*"`
 
-testICanSeeUsage
-testICanSeeHelp
+# run all them
+for func in ${testFunctions}; do
+	${func}
+done
+
