@@ -3,10 +3,10 @@ function testICanTestFalsy()
 	# Given
 	#expect=true
 	expect=false
-	
+
 	# When
 	${expect}
-	
+
 	# Then
 	assertExitFailurefully
 }

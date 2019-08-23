@@ -2,11 +2,11 @@ function testICanTestTruthy()
 {
 	# Given
 	expect=true
-	
+
 	# When
 	actual=true
 	#actual=false
-	
+
 	# Then
 	assertEquals "${expect}" "${actual}"
 }

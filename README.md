@@ -2,13 +2,14 @@
 
 Shell Scripting Test Driven Development
 
-shtest is a toolbox that supports you to develop shell scripts according to TDD approach.
-It was born from need of solve a particular issue (https://github.com/dumblob/mysql2sqlite/issues/8) but looking for a general solution. Other good tools (see links) were discarded when diverging from the desired principles
+*shtest* is a toolbox that supports you to develop shell scripts according to TDD approach.
+It was born from need of solve a particular issue (https://github.com/dumblob/mysql2sqlite/issues/8) but looking for a general solution. Other good tools (see links) were discarded when diverging from the desired principles.
 
-[Tools for Testing Command Line Interfaces](https://spin.atomicobject.com/2016/01/11/command-line-interface-testing-tools/)
+- [Tools for Testing Command Line Interfaces](https://spin.atomicobject.com/2016/01/11/command-line-interface-testing-tools/)
+- [Bash Automated Testing System](https://github.com/sstephenson/bats)
+- [shUnit2 is a xUnit based unit test framework for Bourne based shell scripts.](https://github.com/kward/shunit2)
 
-[Bash Automated Testing System](https://github.com/sstephenson/bats)
-
+*shtest* is freely inspired by PHPUnit framework
 
 # Principles
 
@@ -17,13 +18,13 @@ It was born from need of solve a particular issue (https://github.com/dumblob/my
 * separate directory "tests"
 * fully POSIX-compatible
 
-Of course, shtest was developed using TDD ;-)
+Of course, *shtest* was developed using TDD ;-)
 
-Yes, shtest was tested itself!
+Yes, *shtest* was tested itself!
 
 # Features
 
-shtest can test two main features:
+*shtest* can test two main features:
 
 * interactive: means that you can test your shell script outputs that you expect
 * executive: means that you can test your shell script executes actions you expect
@@ -94,13 +95,13 @@ Its output will be:
 Success testICanSeeHelp
 ```
 
-If test will fail, its output will be:
+If test fails, its output will be:
 
 ```shell
 Failure testICanSeeHelp
 ```
 
-Please, note that *Success* or *Failure* is followed by function's name under test, extracted from *"${FUNCNAME[1]}"* in assert functions
+Please, note that *Success* or *Failure* is followed by function's name under test, extracted from *FUNCNAME* in assert functions
 
 You will see *Success* and *Failure* colored if it is available into your environment
 
