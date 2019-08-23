@@ -107,6 +107,6 @@ You will see *Success* and *Failure* colored if it is available into your enviro
 
 # Version
 
-Current version is 0.0.3-alpha
+Please see current version file
 
 I still am working on it... Stay tuned
