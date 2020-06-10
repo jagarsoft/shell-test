@@ -1,0 +1,20 @@
+function setUp_testICanTestFalsy() {
+	echoWarning setUp testICanTestFalsy
+}
+
+function tearDown_testICanTestFalsy() {
+	echoWarning tearDown testICanTestFalsy
+}
+
+function testICanTestFalsy()
+{
+	# Given
+	#expect=true
+	expect=false
+
+	# When
+	${expect}
+
+	# Then
+	assertExitFailurefully
+}

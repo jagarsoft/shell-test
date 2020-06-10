@@ -1,0 +1,11 @@
+function testICanTestFileExistence()
+{
+	# Given
+	expect=tests/basicTests/testFile
+
+	# When
+	
+
+	# Then
+	assertFileNotEmpty $expect
+}

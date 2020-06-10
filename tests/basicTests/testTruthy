@@ -1,0 +1,20 @@
+function setUp_testICanTestTruthy() {
+	echoWarning setUp testICanTestTruthy
+}
+
+function tearDown_testICanTestTruthy() {
+	echoWarning tearDown testICanTestTruthy
+}
+
+function testICanTestTruthy()
+{
+	# Given
+	expect=true
+
+	# When
+	actual=true
+	#actual=false
+
+	# Then
+	assertEquals "${expect}" "${actual}"
+}

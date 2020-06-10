@@ -1,0 +1,31 @@
+function setUp_testICanSeeHelp() {
+	echoWarning setUp testICanSeeHelp
+	rm -f expected.out actual.out
+}
+
+function tearDown_testICanSeeHelp() {
+	echoWarning tearDown testICanSeeHelp
+	rm -f expected.out actual.out
+}
+
+function testICanSeeHelp()
+{
+	# Given
+	# bultin usageSummary
+	
+	# When
+	usageSummary >actual.out
+	(
+	usage
+	echo
+	echo "-h           This help"
+	echo "-D testsPath Directory for your Test Suites"
+	echo "-f test      Run this test only"
+	echo "TestSuite    Run all test in this Test Suite only" ) > expected.out
+
+	# Then
+	# diff  --strip-trailing-cr expected.out actual.out
+	
+	#assertExitSuccessfully
+	assertNoDiff expected.out actual.out
+}

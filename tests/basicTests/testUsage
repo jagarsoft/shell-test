@@ -1,0 +1,11 @@
+function testICanSeeUsage()
+{
+	# Given
+	expect="shelltest [-h] [-D testsPath] [-f test] [TestSuite]"
+	
+	# When
+	actual=$(usage)
+	
+	# Then
+	assertEquals "${expect}" "${actual}"
+}
