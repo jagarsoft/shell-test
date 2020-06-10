@@ -1,4 +1,0 @@
-function usage()
-{
-    echo "shtest -h -D [tests] TestSuite -f test"
-}
